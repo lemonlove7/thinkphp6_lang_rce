@@ -42,8 +42,6 @@ def thinkphp6():
     root = tk.Tk()
     root.geometry("630x450+374+182")
     root.title("thinkphp6多语言RCE by 鹏组安全")
-    root.iconphoto(False,tk.PhotoImage(file='1.png'))
-
     root.update()
     button_fname=tk.Frame(root)
     button_fname.grid(padx=2, pady=20, row=0, column=0)
