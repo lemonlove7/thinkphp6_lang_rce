@@ -27,4 +27,6 @@ pyinstaller -i favicon.ico -F -w thinkphp6_rce_threading.py
 
 <img width="517" alt="图片" src="https://user-images.githubusercontent.com/56328995/207057834-33fd4d34-815e-4495-b001-bf96896d3df3.png">
 
-对单个目标进行安全检测
+对单个目标进行安全检测(可输入url或ip)
+
+<img width="510" alt="图片" src="https://user-images.githubusercontent.com/56328995/207058572-8f143b90-0c0a-4e54-94e7-6209cda8e4c9.png">
