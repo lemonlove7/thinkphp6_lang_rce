@@ -45,32 +45,20 @@ def thinkphp6():
     root.iconphoto(False,tk.PhotoImage(file='1.png'))
 
     root.update()
-    button_fname=tk.Frame(root)# 创建存放日志组件的容器 ,按钮,进度条
+    button_fname=tk.Frame(root)
     button_fname.grid(padx=2, pady=20, row=0, column=0)
-    #进度条
     progressbarOne = tkinter.ttk.Progressbar(button_fname)
     progressbarOne.grid(padx=2, pady=20, row=0, column=4)
-
-    #label = tk.Label(button_fname,text="url/文件",font=("宋体",15),fg="red")
-    #label.place(x=35, y=40, width=60, height=24)
-    #label.grid(padx=15, pady=20, row=0, column=0)
     entry=tk.Entry(button_fname,font=("宋体",15),fg="black",width=30)
     entry.grid(padx=2, pady=20, row=0, column=1)
-    #entry.place(x=110, y=40, width=254, height=24)
-
     tt = tk.Text(root,font=('宋体',15),fg='green',)
     tt.place(x=15, y=80, width=590, height=162)
-
     tt1 = tk.Text(root, font=('宋体', 15), fg='green', )
     tt1.place(x=15, y=250, width=590, height=162)
-
-    #button_fname.place(x=380, y=40)
     def open_file():
         filename = filedialog.askopenfilename(title='选择批量扫描的文件', filetypes=[('txt', '*.txt')])
         entry.insert('insert', filename)
-
     button_import = tk.Button(button_fname,text="导入文件",font=("宋体",15),fg="blue", command=open_file)
-    #button_import.place(x=450,y=40,width=70, height=24)
     button_import.grid(padx=2, pady=20, row=0, column=0)
     def rce():
         while not q.empty():
@@ -127,17 +115,14 @@ def thinkphp6():
                     url='http://'+url
                 number+=1
                 q.put(url)
-        # 进度最大值
         progressbarOne['maximum'] = number
-        # 进度值初始值
         progressbarOne['value'] = 0
         for i in range(10):
             th = threading.Thread(target=rce)
-            th.setDaemon(True) # 主线程退出就直接让子线程跟随退出,不论是否运行完成。
+            th.setDaemon(True)
             th.start()
 
     button = tk.Button(button_fname,text="开始检测",font=("宋体",15),fg="blue",command=run)
-    #button.place(x=380, y=40, width=70, height=24)
     button.grid(padx=2, pady=20, row=0, column=3)
     root.mainloop()
 
