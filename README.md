@@ -23,3 +23,8 @@ pyinstaller -i favicon.ico -F -w thinkphp6_rce_threading.py
 下载到本地即可运行：https://github.com/lemonlove7/thinkphp6_lang_rce/releases/download/thinkphp6_lang_rce_gui_v1.0/thinkphp6_rce_threading.exe
 
 ### 使用截图
+批量对目标进行安全检测
+
+<img width="517" alt="图片" src="https://user-images.githubusercontent.com/56328995/207057834-33fd4d34-815e-4495-b001-bf96896d3df3.png">
+
+对单个目标进行安全检测
