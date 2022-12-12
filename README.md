@@ -9,5 +9,7 @@ pip install -r requirements.txt
 python thinkphp6_rce_threading.py
 #### 打包成exe
 pip install pyinstaller
+
 pyinstaller -i favicon.ico -F -w thinkphp6_rce_threading.py
+
 可直接下载exe文件也可以下载源码进行编译
